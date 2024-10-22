@@ -5,6 +5,7 @@ import menu from '../../assets/menu_24px.svg'
 import NavBar from "../Navbar/NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
+import ModalResponsivo from "../ModalResponsivo/ModalResponsivo";
 
 const ContainerHeader = styled.header`
     font-family: "Karla", sans-serif;
@@ -19,15 +20,23 @@ const ContainerHeader = styled.header`
 
     @media screen and (max-width: 430px){
         padding: 0;
-        /* justify-content: space-between; */
     }
 
 `
 const Imagem = styled.figure`
 `
 
+const Botao = styled.button`
+
+`
+
 const Header = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Capturando a largura do dispositivo
+    const [botaoClicado, setBotaoClicado] = useState(false);
+
+    const handleClick = () => {
+        setBotaoClicado(!botaoClicado);
+    }
 
     useEffect(() => {
         const handleResize = () => {
@@ -39,25 +48,28 @@ const Header = () => {
       }, []);
 
     return( 
+        <>
         <ContainerHeader>
             <Imagem>
                 <img src={logo} alt="" />
             </Imagem>
 
             { windowWidth < 430 ? (
-                <Imagem>
-                    <button>
-                        <img src={menu} alt="" />
-                    </button>
-                </Imagem>
+                <Botao onClick={handleClick}>
+                    <img src={menu} alt="" />
+                </Botao>
             )  : (
                 <NavBar/>
             )
 
             }
-
-            
         </ContainerHeader>
+
+        {botaoClicado && (
+            <ModalResponsivo/>
+        )}
+        </>
+        
     )
 }
 
