@@ -3,10 +3,18 @@ import logo from '../../assets/logo-black.svg'
 import NavBar from "../Navbar/NavBar";
 
 const ContainerHeader = styled.header`
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 120px;
 
 `
 const Imagem = styled.figure`
-
 `
 
 const Header = () => {
