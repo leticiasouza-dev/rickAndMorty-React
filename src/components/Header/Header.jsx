@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import logo from '../../assets/logo-black.svg'
 import menu from '../../assets/menu_24px.svg'
-import menuFechar from '../../assets/x-responsivo.svg';
+import menuFechar from '../../assets/menuFechar.svg';
 
 import NavBar from "../Navbar/NavBar";
 import { useState } from "react";
