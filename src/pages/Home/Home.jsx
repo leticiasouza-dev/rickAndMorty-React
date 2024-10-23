@@ -5,6 +5,7 @@ import banner from '../../assets/bannerRickEMorty.svg'
 import styled from 'styled-components';
 import CampoDePesquisa from '../../components/CampoDePesquisa/CampoDePesquisa';
 import CampoDeEscolha from '../../components/CampoDeEscolha/CampoDeEscolha';
+import ContainerDeCampos from '../../components/ContainerDeCampos/ContainerDeCampos';
 
 const Main = styled.main`
     padding: 0 120px;
@@ -15,8 +16,7 @@ const Home = () => {
         <Main>
             <Banner imagem={banner}/>
 
-            <CampoDePesquisa placeholder='Digite aqui a sua pesquisa'/>
-        <CampoDeEscolha/>
+            <ContainerDeCampos/>
 
         </Main>
     )

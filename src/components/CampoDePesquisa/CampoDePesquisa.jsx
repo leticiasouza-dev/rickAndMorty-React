@@ -6,7 +6,7 @@ const ContainerCampo = styled.div`
 
     display: flex;
     align-items: center;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 
     padding: 15px 15px;
 
