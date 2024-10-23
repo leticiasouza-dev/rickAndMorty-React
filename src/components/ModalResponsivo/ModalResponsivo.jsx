@@ -2,7 +2,7 @@ import styled from "styled-components";
 import NavBar from "../Navbar/NavBar";
 
 const ModalContainer = styled.div`
-    background-color: red;
+    /* background-color: red; */
 
     height: 80vh;
 
@@ -11,13 +11,18 @@ const ModalContainer = styled.div`
     font-size: 20px;
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
+    justify-content: center;
 `
 
 const ListaModal = styled.ul`
+height: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-around;
 
+    padding: 0;
 `
 
 const ElementoModal = styled.li`

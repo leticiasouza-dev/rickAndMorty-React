@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import logo from '../../assets/logo-black.svg'
 import menu from '../../assets/menu_24px.svg'
+import menuFechar from '../../assets/x-responsivo.svg';
 
 import NavBar from "../Navbar/NavBar";
 import { useState } from "react";
@@ -27,15 +28,18 @@ const Imagem = styled.figure`
 `
 
 const Botao = styled.button`
-
+    border: none;
+    background-color: white;
 `
 
 const Header = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth); // Capturando a largura do dispositivo
     const [botaoClicado, setBotaoClicado] = useState(false);
+    const [iconeMenuResponsivo, setIconeMenuResponsivo] = useState(menu);
 
     const handleClick = () => {
         setBotaoClicado(!botaoClicado);
+        setIconeMenuResponsivo((prevIcone) => (prevIcone === menu ? menuFechar : menu));
     }
 
     useEffect(() => {
@@ -56,7 +60,7 @@ const Header = () => {
 
             { windowWidth < 430 ? (
                 <Botao onClick={handleClick}>
-                    <img src={menu} alt="" />
+                    <img src={iconeMenuResponsivo} alt="" />
                 </Botao>
             )  : (
                 <NavBar/>
