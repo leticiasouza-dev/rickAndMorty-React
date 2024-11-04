@@ -31,7 +31,9 @@ const Home = () => {
 
             <ContainerDeCampos/>
 
-            <ContainerDeCards/>
+           
+
+            <ContainerDeCards data={data}/>
 
         </Main>
     )

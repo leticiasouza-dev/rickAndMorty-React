@@ -10,13 +10,21 @@ const ContainerCards = styled.div`
     margin: 40px 0;
 `
 
-const ContainerDeCards = () => {
+const ContainerDeCards = ({data}) => {
     return(
         <ContainerCards>
-            <CardPersonagem/>
-            <CardPersonagem/>
-            <CardPersonagem/>
-            <CardPersonagem/>
+            {data && data.results ? (data.results.map((personagem) => (
+                <CardPersonagem 
+                    key={personagem.id} 
+                    name={personagem.name} 
+                    species={personagem.species} 
+                    logo={personagem.image} 
+                />
+                ))
+                ) : (
+                <p>Carregando...</p>
+                )
+            }
         </ContainerCards>
     )
 }
