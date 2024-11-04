@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FormularioDeEscolha = styled.form`
-    width: 20%;
+    width: 240px;
 
     display: flex;
     align-items: center;

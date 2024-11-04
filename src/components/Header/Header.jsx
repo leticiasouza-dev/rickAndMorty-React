@@ -25,6 +25,7 @@ const ContainerHeader = styled.header`
 
 `
 const Imagem = styled.figure`
+    margin: 0;
 `
 
 const Botao = styled.button`

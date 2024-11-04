@@ -2,7 +2,7 @@ import styled from "styled-components";
 import lupa from '../../assets/iconeLupa.svg';
 
 const ContainerCampo = styled.div`
-    width: 20%;
+    width: 240px;
 
     display: flex;
     align-items: center;

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import CampoDePesquisa from '../../components/CampoDePesquisa/CampoDePesquisa';
 import CampoDeEscolha from '../../components/CampoDeEscolha/CampoDeEscolha';
 import ContainerDeCampos from '../../components/ContainerDeCampos/ContainerDeCampos';
+import ContainerDeCards from '../../components/ContainerDeCards/ContainerDeCards';
 
 const Main = styled.main`
     padding: 0 120px;
@@ -17,6 +18,8 @@ const Home = () => {
             <Banner imagem={banner}/>
 
             <ContainerDeCampos/>
+
+            <ContainerDeCards/>
 
         </Main>
     )
