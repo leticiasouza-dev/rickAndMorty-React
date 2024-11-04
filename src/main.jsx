@@ -21,8 +21,12 @@ const router = createBrowserRouter([
   }
 ])
 
+import { DataProvider } from './context/DataContext.jsx'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <DataProvider>
+      <RouterProvider router={router}/>
+    </DataProvider>
   </StrictMode>,
 )
